@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:gravity="center"
+    android:background="@color/background_color">
+
+    <TextView
+        android:id="@+id/tv_input_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter value:"
+        android:textSize="20sp"
+        android:textColor="@color/primary_text"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-medium"
+        android:paddingBottom="8dp"/>
+
+    <EditText
+        android:id="@+id/et_input"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:inputType="numberDecimal"
+        android:hint="e.g., 170"
+        android:layout_marginTop="8dp"
+        android:padding="12dp"
+        android:background="@drawable/rounded_edittext"
+        android:textColor="@color/primary_text"
+        android:textSize="18sp"/>
+
+    <RadioGroup
+        android:id="@+id/rg_conversion_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp">
+
+        <RadioButton
+            android:id="@+id/rb_cm_to_inch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cm to inch"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/rb_inch_to_cm"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="inch to cm"
+            android:layout_marginLeft="16dp"/>
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="16dp"
+        android:background="@drawable/rounded_button"
+        android:backgroundTint="#064D9E"
+        android:fontFamily="sans-serif-medium"
+        android:paddingLeft="24dp"
+        android:paddingTop="12dp"
+        android:paddingRight="24dp"
+        android:paddingBottom="12dp"
+        android:text="Convert"
+        android:textColor="@android:color/white"
+        android:textColorLink="#064D9E"
+        android:textSize="16sp"
+        app:strokeColor="#064D9E" />
+
+    <TextView
+        android:id="@+id/tv_result"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:textColor="@color/primary_text"
+        android:text="Result: "
+        android:layout_gravity="center"
+        android:layout_marginTop="24dp"
+        android:fontFamily="sans-serif-medium"
+        android:paddingTop="8dp"/>
+</LinearLayout>
